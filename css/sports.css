@@ -7,7 +7,7 @@ body {
 }
 
 header {
-    background-color: #004d40;
+    background-color: #cccccc; /* Neutral default, overridden by theme classes */
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
@@ -32,9 +32,9 @@ div {
 
 nav {
     flex: 0 0 200px;
-    background-color: #e0f2f1;
+    background-color: #f0f0f0; /* Neutral default, overridden by theme classes */
     padding: 20px;
-    border-right: 1px solid #c8e6c9;
+    border-right: 1px solid #e0e0e0; /* Neutral default, overridden by theme classes */
 }
 
 nav ul {
@@ -49,7 +49,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #66ec83;
+    color: #333333; /* Neutral default, overridden by theme classes */
     font-weight: bold;
     font-size: 1.1em;
     display: block;
@@ -60,8 +60,8 @@ nav ul li a {
 
 nav ul li a:hover,
 nav ul li a:focus {
-    background-color: #b2dfdb;
-    color: #004d40;
+    background-color: #e0e0e0; /* Neutral default, overridden by theme classes */
+    color: #000000; /* Neutral default, overridden by theme classes */
 }
 
 main {
@@ -82,21 +82,21 @@ main section:last-child {
 }
 
 main section h2 {
-    color: #00796b;
+    color: #333333; /* Neutral default, overridden by theme classes */
     font-size: 2em;
     margin-top: 0;
-    border-bottom: 2px solid #e0f2f1;
+    border-bottom: 2px solid #f0f0f0; /* Neutral default, overridden by theme classes */
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
 
 main section img {
     max-width: 100%;
-    height: 1.2em;
+    height: 1.2em; /* This height seems a bit small for main section images */
 }
 
 footer {
-    background-color: #004d0e;
+    background-color: #cccccc; /* Neutral default, overridden by theme classes */
     color: #ffffff;
     padding: 10px 30px;
     text-align: center;
@@ -117,7 +117,7 @@ footer ul {
     padding: 0px 32px;
     margin: 20px auto;
     max-width: 800px;
-    background-color: #e6ffe6;
+    background-color: #f8f8f8; /* Neutral default, overridden by theme classes */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     color: #333;
@@ -134,7 +134,7 @@ footer ul li {
     justify-content: center;
     width: 100%;
     text-align: center;
-    background-color: #e6ffe6;
+    background-color: #f8f8f8; /* Neutral default, overridden by theme classes */
     color: #333;
     padding-top: 15px 20px;
     box-sizing: border-box;
@@ -155,7 +155,7 @@ footer ul li img.bullet-icon {
 
 footer ul li span.list-text {
     flex-grow: 1;
-    background-color: #004d40;
+    background-color: #333333; /* Neutral default, overridden by theme classes */
     color: #ffffff;
     padding: 5px 10px;
     border-radius: 4px;
@@ -164,4 +164,130 @@ footer ul li span.list-text {
     box-sizing: border-box;
     line-height: 1.4;
     text-align: left;
+}
+
+/* Basketball Theme (Orange) */
+body.basketball-theme header {
+    background-color: #c64c00; /* Darker orange for header */
+}
+
+body.basketball-theme nav {
+    background-color: #ffe0b2; /* Orange 100 */
+    border-right: 1px solid #ffcc80; /* Orange 200 */
+}
+
+body.basketball-theme nav ul li a {
+    color: #ef6c00; /* Orange 800 */
+}
+
+body.basketball-theme nav ul li a:hover,
+body.basketball-theme nav ul li a:focus {
+    background-color: #ffab40; /* Orange A200 */
+    color: #c64c00; /* Darker orange for header */
+}
+
+body.basketball-theme main section h2 {
+    color: #ef6c00; /* Orange 800 */
+    border-bottom: 2px solid #ffcc80; /* Orange 200 */
+}
+
+body.basketball-theme footer {
+    background-color: #e65100; /* Deep Orange 900 - lighter than header */
+}
+
+body.basketball-theme footer ul {
+    background-color: #fff3e0; /* Orange 50 */
+}
+
+body.basketball-theme footer ul li {
+    background-color: #fff3e0; /* Orange 50 */
+}
+
+body.basketball-theme footer ul li span.list-text {
+    background-color: #ef6c00; /* Orange 800 */
+    color: #ffffff;
+}
+
+/* Judo Theme (Black/White/Gray) */
+body.judo-theme header {
+    background-color: #000000; /* Pure black for header */
+}
+
+body.judo-theme nav {
+    background-color: #e0e0e0; /* Grey 300 */
+    border-right: 1px solid #bdbdbd; /* Grey 400 */
+}
+
+body.judo-theme nav ul li a {
+    color: #424242; /* Grey 800 */
+}
+
+body.judo-theme nav ul li a:hover,
+body.judo-theme nav ul li a:focus {
+    background-color: #9e9e9e; /* Grey 500 */
+    color: #000000; /* Pure black for header */
+}
+
+body.judo-theme main section h2 {
+    color: #424242; /* Grey 800 */
+    border-bottom: 2px solid #e0e0e0; /* Grey 300 */
+}
+
+body.judo-theme footer {
+    background-color: #212121; /* Grey 900 - lighter than header */
+}
+
+body.judo-theme footer ul {
+    background-color: #f5f5f5; /* Grey 100 */
+}
+
+body.judo-theme footer ul li {
+    background-color: #f5f5f5; /* Grey 100 */
+}
+
+body.judo-theme footer ul li span.list-text {
+    background-color: #424242; /* Grey 800 */
+    color: #ffffff;
+}
+
+/* Baseball Theme (Blue) */
+body.baseball-theme header {
+    background-color: #0d47a1; /* Blue 900 - darker blue for header */
+}
+
+body.baseball-theme nav {
+    background-color: #e3f2fd; /* Blue 50 */
+    border-right: 1px solid #90caf9; /* Blue 200 */
+}
+
+body.baseball-theme nav ul li a {
+    color: #2196f3; /* Blue 500 */
+}
+
+body.baseball-theme nav ul li a:hover,
+body.baseball-theme nav ul li a:focus {
+    background-color: #64b5f6; /* Blue 300 */
+    color: #0d47a1; /* Blue 900 - darker blue for header */
+}
+
+body.baseball-theme main section h2 {
+    color: #2196f3; /* Blue 500 */
+    border-bottom: 2px solid #90caf9; /* Blue 200 */
+}
+
+body.baseball-theme footer {
+    background-color: #1976d2; /* Blue 700 - lighter than header */
+}
+
+body.baseball-theme footer ul {
+    background-color: #e3f2fd; /* Blue 50 */
+}
+
+body.baseball-theme footer ul li {
+    background-color: #e3f2fd; /* Blue 50 */
+}
+
+body.baseball-theme footer ul li span.list-text {
+    background-color: #2196f3; /* Blue 500 */
+    color: #ffffff;
 }
