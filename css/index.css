@@ -17,6 +17,13 @@ body {
     animation: olympicGradient 15s ease infinite; /* アニメーションを追加 */
 }
 
+/* グラデーションのアニメーション */
+@keyframes olympicGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
 /* ヘッダーのグラデーション */
 header {
     /* 背景を透明にしてbodyのグラデーションが透けて見えるように */
@@ -25,30 +32,26 @@ header {
     padding: 20px 0;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px; /* 下に少し余白を追加 */
+    margin-bottom: 20px;
+    backdrop-filter: blur(5px); /* 背景をぼかす */
 }
 
 header h1 {
     margin: 0;
     font-size: 3em;
     letter-spacing: 3px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字に影をつけて読みやすくする */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-header p {
-    font-size: 1.2em;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* 文字に影をつけて読みやすくする */
-}
-
-/* メインコンテンツとナビゲーションのスタイル */
 div {
     display: flex;
     max-width: 1200px;
     margin: 20px auto;
-    background-color: rgba(255, 255, 255, 0.9); /* コンテンツエリアの背景を半透明にしてグラデーションが少し透けるように */
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.8); /* コンテンツエリアの背景も半透明に */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    backdrop-filter: blur(5px); /* 背景をぼかす */
 }
 
 nav {
@@ -92,35 +95,101 @@ main {
 
 main section {
     margin-bottom: 30px;
-    background-color: #ffffff; /* セクションの背景は不透明に */
-    padding: 25px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-main section:last-child {
-    margin-bottom: 0;
 }
 
 main section h2 {
-    color: #333333;
-    font-size: 2em;
-    margin-top: 0;
-    border-bottom: 2px solid #f0f0f0;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+    color: #333;
+    font-size: 2.2em;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 5px;
 }
 
 main section img {
     max-width: 100%;
-    height: auto; /* 画像の高さは自動調整に */
-    display: block; /* 中央揃えのためにブロック要素にする */
-    margin: 0 auto 15px auto; /* 上下に余白を追加して中央揃え */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* グラデーションアニメーションの定義 */
-@keyframes olympicGradient {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+main section ul {
+    list-style: none;
+    padding: 0;
+}
+
+main section ul li {
+    background-color: rgba(255, 255, 255, 0.9); /* ニュースリストの背景も半透明に */
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+main section ul li:hover {
+    transform: translateY(-3px);
+}
+
+footer {
+    background-color: rgba(51, 51, 51, 0.8); /* フッターの背景も半透明に */
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    backdrop-filter: blur(5px); /* 背景をぼかす */
+}
+
+/* テーマ切り替えボタンのスタイル */
+.theme-toggle-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1000;
+    backdrop-filter: blur(3px); /* 背景を少しぼかす */
+}
+
+.theme-toggle-button img {
+    width: 30px;
+    height: 30px;
+}
+
+.theme-toggle-button:hover {
+    background-color: rgba(240, 240, 240, 0.9);
+    transform: translateY(-2px);
+}
+
+/* ゲームをプレイするボタンのスタイル */
+.play-game-button {
+    position: fixed; /* 画面に固定 */
+    top: 20px; /* 上から20px */
+    right: 90px; /* 右から90px (テーマ切り替えボタンの右に配置するため) */
+    background-color: #ffffff; /* 白色 */
+    color: #333; /* 文字色を黒に */
+    border: 1px solid #ddd; /* 軽めの境界線 */
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 999; /* テーマ切り替えボタンよりは下、他のコンテンツよりは上に */
+    font-weight: bold;
+    backdrop-filter: blur(3px); /* 背景を少しぼかす */
+}
+
+.play-game-button:hover {
+    background-color: #f0f0f0; /* ホバーで少し色が変わる */
+    transform: translateY(-2px); /* ホバーで少し上に移動するアニメーション */
 }
