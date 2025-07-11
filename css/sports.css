@@ -1,6 +1,5 @@
 body {
     font-family: 'Segoe UI', 'BIZ UDGothic', sans-serif;
-    margin: 0;
     line-height: 1.6;
     color: #333;
     background-color: #f4f7f6;
@@ -92,7 +91,7 @@ main section h2 {
 
 main section img {
     max-width: 100%;
-    height: 1.2em; /* This height seems a bit small for main section images */
+    height: auto;
 }
 
 footer {
@@ -122,8 +121,10 @@ footer ul {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     color: #333;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 footer ul li {
@@ -132,11 +133,11 @@ footer ul li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: auto;
+    min-width: 150px;
     text-align: center;
     background-color: #f8f8f8; /* Neutral default, overridden by theme classes */
     color: #333;
-    padding-top: 15px 20px;
     box-sizing: border-box;
 }
 
@@ -148,7 +149,6 @@ footer ul li:last-child {
 footer ul li img.bullet-icon {
     width: 24px;
     height: 24px;
-    margin-right: 0;
     margin: 8px;
     flex-shrink: 0;
 }
@@ -157,13 +157,12 @@ footer ul li span.list-text {
     flex-grow: 1;
     background-color: #333333; /* Neutral default, overridden by theme classes */
     color: #ffffff;
-    padding: 5px 10px;
     border-radius: 4px;
-    display: inline-block;
+    display: block;
     max-width: 100%;
     box-sizing: border-box;
     line-height: 1.4;
-    text-align: left;
+    text-align: center;
 }
 
 /* Basketball Theme (Orange) */
@@ -234,7 +233,7 @@ body.judo-theme main section h2 {
 }
 
 body.judo-theme footer {
-    background-color: #212121; /* Grey 900 - lighter than header */
+    background-color: #616161; /* Grey 700 - Adjusted to a lighter gray */
 }
 
 body.judo-theme footer ul {
