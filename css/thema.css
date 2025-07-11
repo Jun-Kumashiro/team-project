@@ -1,0 +1,206 @@
+/* theme.css (thema.cssとして使用) */
+
+/* 基本スタイル（ライトモードのデフォルト） */
+body {
+    transition: background-color 0.3s, color 0.3s; /* スムーズな切り替え */
+}
+
+/* ダークモードのスタイル */
+body.dark-mode {
+    background-color: #282c34; /* ダークモードの背景色 */
+    color: #e0e0e0; /* ダークモードの文字色 */
+}
+
+/* ヘッダーの背景色 */
+body.dark-mode header {
+    background-color: #3b3f47; /* ダークモード */
+    color: #f0f0f0;
+}
+
+/* ナビゲーションの背景色と境界線、文字色 */
+body.dark-mode nav {
+    background-color: #3b3f47; /* ダークモード */
+    border-right: 1px solid #555; /* 境界線も調整 */
+}
+
+body.dark-mode nav ul li a {
+    color: #e0e0e0; /* ナビゲーションリンクの文字色 */
+}
+
+body.dark-mode nav ul li a:hover,
+body.dark-mode nav ul li a:focus {
+    background-color: #555;
+    color: #ffffff;
+}
+
+/* メインコンテンツエリアの背景色とシャドウ */
+body.dark-mode div {
+    background-color: #3b3f47;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+/* 各セクションの背景色とシャドウ */
+body.dark-mode main section {
+    background-color: #444a54; /* ダークモード */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* 各セクションのタイトル色と下線 */
+body.dark-mode main section h2 {
+    color: #f0f0f0; /* ダークモード */
+    border-bottom: 2px solid #555; /* 境界線も調整 */
+}
+
+/* フッターの背景色と文字色、シャドウ */
+footer {
+    transition: background-color 0.3s, color 0.3s; /* フッターもスムーズな切り替え */
+}
+
+body.dark-mode footer {
+    background-color: #3b3f47; /* ダークモード */
+    color: #f0f0f0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.4);
+}
+
+/* フッター内のリスト（見どころ）の背景色と文字色 */
+body.dark-mode footer ul {
+    background-color: #444a54; /* ダークモード */
+    color: #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode footer ul li {
+    background-color: #444a54; /* ダークモード */
+    color: #e0e0e0;
+}
+
+body.dark-mode footer ul li span.list-text {
+    background-color: #555; /* ダークモード */
+    color: #ffffff;
+}
+
+/* 切り替えボタンのスタイル */
+.theme-toggle-button {
+    position: fixed; /* 画面に対して固定 */
+    top: 20px; /* 上からの位置 */
+    right: 20px; /* 右からの位置 */
+    background-color: transparent; /* 背景を透明に */
+    border: none;
+    padding: 0;
+    border-radius: 5px; /* 必要であれば */
+    cursor: pointer;
+    z-index: 1000; /* 他の要素より手前に表示 */
+    box-shadow: none;
+    transition: transform 0.2s; /* ホバー時のアニメーションのみ */
+    display: flex; /* 画像を中央に配置するためにflexboxを使用 */
+    align-items: center;
+    justify-content: center;
+    width: 60px; /* ボタンの幅を60pxに */
+    height: 60px; /* ボタンの高さを60pxに */
+}
+
+.theme-toggle-button:hover {
+    transform: scale(1.1); /* 少し拡大 */
+}
+
+/* ボタン内の画像のスタイル */
+.theme-toggle-button img {
+    width: 60px; /* 画像の幅を60pxに */
+    height: 60px; /* 画像の高さを60pxに */
+    display: block; /* 余分なスペースを削除 */
+    object-fit: contain; /* 画像がコンテナに収まるように調整 */
+}
+
+/* スポーツごとのテーマ色をダークモードに対応させる場合 */
+/* baseball.html のテーマ色（Blue） */
+body.dark-mode.baseball-theme header {
+    background-color: #0d47a1; /* より濃い青 */
+}
+body.dark-mode.baseball-theme nav {
+    background-color: #1a237e; /* より濃い青 */
+    border-right-color: #42a5f5;
+}
+body.dark-mode.baseball-theme nav ul li a {
+    color: #bbdefb;
+}
+body.dark-mode.baseball-theme nav ul li a:hover,
+body.dark-mode.baseball-theme nav ul li a:focus {
+    background-color: #283593;
+    color: #ffffff;
+}
+body.dark-mode.baseball-theme main section h2 {
+    color: #90caf9;
+    border-bottom-color: #42a5f5;
+}
+body.dark-mode.baseball-theme footer {
+    background-color: #0d47a1;
+}
+body.dark-mode.baseball-theme footer ul,
+body.dark-mode.baseball-theme footer ul li {
+    background-color: #1a237e;
+}
+body.dark-mode.baseball-theme footer ul li span.list-text {
+    background-color: #2196f3;
+}
+
+/* basketball.html のテーマ色（Orange） */
+body.dark-mode.basketball-theme header {
+    background-color: #bf360c; /* より濃いオレンジ */
+}
+body.dark-mode.basketball-theme nav {
+    background-color: #e65100; /* より濃いオレンジ */
+    border-right-color: #ff9800;
+}
+body.dark-mode.basketball-theme nav ul li a {
+    color: #ffccbc;
+}
+body.dark-mode.basketball-theme nav ul li a:hover,
+body.dark-mode.basketball-theme nav ul li a:focus {
+    background-color: #f57c00;
+    color: #ffffff;
+}
+body.dark-mode.basketball-theme main section h2 {
+    color: #ffb74d;
+    border-bottom-color: #ff9800;
+}
+body.dark-mode.basketball-theme footer {
+    background-color: #bf360c;
+}
+body.dark-mode.basketball-theme footer ul,
+body.dark-mode.basketball-theme footer ul li {
+    background-color: #e65100;
+}
+body.dark-mode.basketball-theme footer ul li span.list-text {
+    background-color: #f57c00;
+}
+
+/* judo.html のテーマ色（Black/White/Gray） */
+body.dark-mode.judo-theme header {
+    background-color: #000000;
+}
+body.dark-mode.judo-theme nav {
+    background-color: #212121;
+    border-right-color: #424242;
+}
+body.dark-mode.judo-theme nav ul li a {
+    color: #bdbdbd;
+}
+body.dark-mode.judo-theme nav ul li a:hover,
+body.dark-mode.judo-theme nav ul li a:focus {
+    background-color: #424242;
+    color: #ffffff;
+}
+body.dark-mode.judo-theme main section h2 {
+    color: #bdbdbd;
+    border-bottom-color: #424242;
+}
+body.dark-mode.judo-theme footer {
+    background-color: #3b3f47;
+}
+body.dark-mode.judo-theme footer ul,
+body.dark-mode.judo-theme footer ul li {
+    background-color: #303030;
+}
+body.dark-mode.judo-theme footer ul li span.list-text {
+    background-color: #424242;
+}
