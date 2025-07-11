@@ -5,8 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>柔道</title>
         <link rel="stylesheet" href="css/sports.css">
+        <link rel="stylesheet" href="css/thema.css">
     </head>
     <body class="judo-theme">
+        <button id="theme-toggle" class="theme-toggle-button">
+            <img id="theme-icon" src="images/moon.png" alt="モード切り替えアイコン">
+        </button>
         <header>
             <h1>柔道</h1>
         </header>
@@ -21,16 +25,19 @@
             </nav>
             <main>
                 <section>
-                    <img src="">
-                </section>
+                    <div class="judo-image-gallery">
+                        <img src="images/judo_match_01.png" alt="柔道の試合">
+                        <img src="images/judo_randori_01.png" alt="柔道の乱取り">
+                    </div>
+                    </section>
                 <section>
                     <h2>おすすめ動画</h2>
-                    <ul>
+                    <ul class="video-list">
                         <li>
                             <iframe width="300" height="169" src="https://www.youtube.com/embed/RHjoWIPMhDk?si=2NZVBpHK-4kNZWOq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </li>
                         <li>
-                            <iframe width="300" height="169" src="https://www.youtube.com/embed/5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="300" height="169" src="https://www.youtube.com/embed/vKMGdMoQ47U?si=RjGi9reT3Rqp4OLF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                         </li>
                     </ul>
                 </section>
@@ -49,14 +56,15 @@
                 </li>
                 <li>
                     <img src="images/judo_dougi.png" alt="柔道" class="bullet-icon">
-                    <span class='list-text'>通常階級別に分かれて競技しますが、それでも体格差が出てしまう場面もあります。しかし、小さな選手が大きな選手を翻弄してしまうような立ち回りはとても魅力的な戦いに見えます。</span>
+                    <span class='list-text'>通常階級別に分かれて競技しますが、それでも体格差が出てしまう場面もあります。しかし、小さな選手が大きな選手を翻弄してしまうような立ち回りもとても魅力的な戦いに見えます。</span>
                 </li>
                 <li>
                     <img src="images/judo_dougi.png" alt="柔道" class="bullet-icon">
-                    <span class='list-text'>オリンピックでは日本は柔道大国として多くのメダルを獲得していることから、その注目度は高く、世界にも大きな影響を与えています。</span>
+                    <span class='list-text'>柔道では礼節を重んじ、相手への敬意を示すことが求められます。試合前後だけでなく、練習中も常に相手を尊重する姿勢が素晴らしいです。</span>
                     <img src="images/judo_dougi.png" alt="柔道" class="bullet-icon">
                 </li>
             </ul>
         </footer>
+        <script src="js/theme.js"></script>
     </body>
 </html>

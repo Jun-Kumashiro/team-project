@@ -162,7 +162,8 @@ footer ul li span.list-text {
     max-width: 100%;
     box-sizing: border-box;
     line-height: 1.4;
-    text-align: center;
+    text-align: left;
+    padding: 10px;
 }
 
 /* Basketball Theme (Orange) */
