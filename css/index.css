@@ -1,3 +1,126 @@
-.red{
-    color:red;
+/* index.css */
+
+body {
+    font-family: 'Segoe UI', 'BIZ UDGothic', sans-serif;
+    margin: 0;
+    line-height: 1.6;
+    color: #333;
+    /* 五輪のリングの色をテーマにしたグラデーション */
+    background: linear-gradient(135deg,
+        #0081C8 0%,    /* 青 */
+        #FCB131 25%,   /* 黄 */
+        #000000 50%,   /* 黒 */
+        #00A651 75%,   /* 緑 */
+        #EE334E 100%   /* 赤 */
+    );
+    background-size: 400% 400%; /* グラデーションのサイズを大きくして、より滑らかに見せる */
+    animation: olympicGradient 15s ease infinite; /* アニメーションを追加 */
+}
+
+/* ヘッダーのグラデーション */
+header {
+    /* 背景を透明にしてbodyのグラデーションが透けて見えるように */
+    background-color: rgba(255, 255, 255, 0.1); /* 少しだけ背景色をつけて文字を読みやすくする */
+    color: #ffffff;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px; /* 下に少し余白を追加 */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* 文字に影をつけて読みやすくする */
+}
+
+header p {
+    font-size: 1.2em;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* 文字に影をつけて読みやすくする */
+}
+
+/* メインコンテンツとナビゲーションのスタイル */
+div {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.9); /* コンテンツエリアの背景を半透明にしてグラデーションが少し透けるように */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+nav {
+    flex: 0 0 200px;
+    background-color: rgba(240, 240, 240, 0.9); /* ナビゲーションの背景も半透明に */
+    padding: 20px;
+    border-right: 1px solid rgba(220, 220, 220, 0.9);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    margin-bottom: 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333333;
+    font-weight: bold;
+    font-size: 1.1em;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: rgba(220, 220, 220, 0.7);
+    color: #000000;
+}
+
+main {
+    flex-grow: 1;
+    padding: 30px;
+}
+
+main section {
+    margin-bottom: 30px;
+    background-color: #ffffff; /* セクションの背景は不透明に */
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+main section:last-child {
+    margin-bottom: 0;
+}
+
+main section h2 {
+    color: #333333;
+    font-size: 2em;
+    margin-top: 0;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+main section img {
+    max-width: 100%;
+    height: auto; /* 画像の高さは自動調整に */
+    display: block; /* 中央揃えのためにブロック要素にする */
+    margin: 0 auto 15px auto; /* 上下に余白を追加して中央揃え */
+}
+
+/* グラデーションアニメーションの定義 */
+@keyframes olympicGradient {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
