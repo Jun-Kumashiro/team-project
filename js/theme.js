@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 画像のパスを定義 (HTMLファイルからの相対パス)
     // プロジェクトのルートディレクトリが 'team-project' と仮定
-    const moonIconPath = 'images/moon.png';
-    const sunIconPath = 'images/sun.png';
+    const moonIconPath = 'images/moon_icon.png';
+    const sunIconPath = 'images/sun_icon.png';
 
     // ページの初期テーマを設定
     // 優先順位: ローカルストレージ > OS設定 > デフォルト（ライトモード）
